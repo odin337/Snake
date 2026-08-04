@@ -1,12 +1,12 @@
-name: Generate Snake Animation
+name: Snake - GitHub Contributions
 
 on:
   schedule:
-    - cron: "0 0 * * *" 
-  workflow_dispatch:
+    - cron: "0 0 * * *"   # ежедневно по UTC
+  workflow_dispatch:       # ручной запуск из Actions
   push:
     branches:
-      - main
+      - main               # перегенерация при изменениях в репо
 
 permissions:
   contents: write
@@ -28,6 +28,8 @@ jobs:
             dist/github-snake.svg
             dist/github-snake-dark.svg?palette=github-dark
             dist/ocean.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Deploy to Output Branch
         uses: peaceiris/actions-gh-pages@v4
