@@ -1,75 +1,45 @@
-<!-- SNAKE REPO README FOR odin337 -->
+<!-- Snake repo README -->
 
 <h1 align="center">Snake · GitHub Contributions Animation</h1>
 
 <p align="center">
-  <b>Автор: Рощупко Данила (odin337) · High-performance IT professional · Backend / Architecture / AI / Infra</b>
+  <b>Contribution graph animation for the GitHub profile of odin337</b>
 </p>
 
 <p align="center">
   <a href="https://github.com/odin337">
-    <img src="https://komarev.com/ghpvc/?username=odin337&style=for-the-badge&color=blue" alt="Profile views" />
+    <img src="https://komarev.com/ghpvc/?username=odin337&style=for-the-badge&color=0f172a" alt="Profile views" />
+  </a>
+  <a href="https://github.com/odin337/Snake/stargazers">
+    <img src="https://img.shields.io/github/stars/odin337/Snake?style=for-the-badge&color=111827" alt="Repo stars" />
+  </a>
+  <a href="https://github.com/odin337/Snake/network/members">
+    <img src="https://img.shields.io/github/forks/odin337/Snake?style=for-the-badge&color=111827" alt="Repo forks" />
   </a>
 </p>
 
 ---
 
-## 🐍 О репозитории
+## Что это
 
-Этот репозиторий — демонстрация анимации «змейка, которая ест мои коммиты» на основе графика вкладов GitHub.  
-Анимация генерируется автоматически через **GitHub Actions** и обновляется каждый день.
+Этот репозиторий генерирует анимированную змейку, которая «ест» вкладки GitHub contributions.  
+Анимация автоматически обновляется через GitHub Actions и публикуется в ветку `output`.
 
-> Используется GitHub Action [`Platane/snk`](https://github.com/Platane/snk), который строит SVG/GIF по твоему contribution graph. [11][26]
-
----
-
-## 👤 Автор: Рощупко Данила · odin337
-
-Инженер‑разработчик и архитектор цифровых решений:
-
-- **Backend / Architecture** — проектирование надёжных и масштабируемых сервисов.
-- **AI & Automation** — интеграции LLM, AI‑сервисы и автоматизация процессов.
-- **Network / VPN / Infra** — WireGuard, MTProto, DPI‑evasion, сетевые решения.
-- **DevOps** — Docker, CI/CD, облачные окружения, поддержка продакшена.
+Основа — `Platane/snk`, популярный GitHub Action для генерации SVG/GIF из contribution graph. [11][26]
 
 ---
 
-## 🛠️ Технический стек
+## Как это работает
 
-<div align="center">
-  <img
-    src="https://skillicons.dev/icons?i=go,python,js,ts,rust,kotlin,java,vue,react,nodejs,postgres,mysql,redis,docker,kubernetes,linux,git,github"
-    alt="Tech stack"
-  />
-</div>
-
-**Языки:** Go, Python, JavaScript, TypeScript, Rust, Kotlin, Java  
-**Backend:** REST / gRPC, микросервисы, интеграции, авторизация  
-**Infra:** Docker, Linux, CI/CD, GitHub Actions, облака  
-**Интересы:** AI, VPN, network engineering, cybersecurity, crypto
+1. Workflow запускается по расписанию или вручную.
+2. Action читает contribution graph пользователя `odin337`.
+3. Генерируются SVG и GIF.
+4. Файлы публикуются в `output`.
+5. README профиля забирает эти файлы и показывает их на главной странице профиля.
 
 ---
 
-## 📊 Статистика GitHub
-
-<div align="center">
-  <img
-    src="https://github-readme-stats.vercel.app/api?username=odin337&show_icons=true&hide_border=true&theme=tokyonight"
-    alt="odin337 GitHub Stats"
-  />
-  <img
-    src="https://streak-stats.demolab.com?user=odin337&theme=tokyonight&hide_border=true&border_radius=6"
-    alt="odin337 Streak Stats"
-  />
-  <img
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=odin337&layout=compact&theme=tokyonight&hide_border=true"
-    alt="Top Languages"
-  />
-</div>
-
----
-
-## 🐍 Змейка, «ест» мои коммиты
+## Демо
 
 <p align="center">
   <picture>
@@ -90,19 +60,16 @@
 
 ---
 
-## ⚙️ Как это работает
+## Дополнительно
 
-1. Workflow `snake.yml` запускается по расписанию и при пушах. [26]
-2. Action `Platane/snk` читает твой график вкладов (коммиты, PR, issues). [11]
-3. Генерируются:
-   - `github-snake.svg` — светлая версия,
-   - `github-snake-dark.svg` — тёмная палитра,
-   - `ocean.gif` — GIF‑анимация.
-4. Файлы публикуются в ветку `output`, откуда SVG/GIF вставляются в README. [26]
+- Light/dark mode support.
+- Auto-update via GitHub Actions.
+- GIF export option.
+- Можно использовать как основу для своего профиля.
 
 ---
 
-## 📬 Контакты
+## Credits
 
-- Telegram: **@odin337**  
-- GitHub: [@odin337](https://github.com/odin337)
+- [Platane/snk](https://github.com/Platane/snk)
+- GitHub Actions
